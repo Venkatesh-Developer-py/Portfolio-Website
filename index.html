@@ -612,7 +612,7 @@
 
       <aside class="hero-card">
         <div class="avatar-wrap">
-          <img src="no beard.png" alt="M. Thiru Venkatesh" class="avatar">
+          <img src="Image.png" alt="M. Thiru Venkatesh" class="avatar">
         </div>
         <div class="stat-grid">
           <div class="stat">
@@ -746,7 +746,7 @@
           <div class="project-stack"><span class="stack-chip">Django</span><span class="stack-chip">Python</span><span class="stack-chip">Weather API</span><span class="stack-chip">JavaScript</span><span class="stack-chip">CSS</span></div>
         </div>
         <div class="project-links-col">
-          <a href="https://whethar-application-production.up.railway.app" target="_blank" class="project-link">↗ Live App</a>
+          <a href="https://whether-application-ygep.onrender.com" target="_blank" class="project-link">↗ Live App</a>
           <span class="project-badge">Sep – Oct 2025</span>
         </div>
       </div>
@@ -761,10 +761,10 @@
     <div class="deploy-grid">
       <div class="deploy-card"><span class="deploy-icon">🌐</span><div class="deploy-name">Bakery Website</div><p class="deploy-desc">React SPA with component-based architecture, responsive layout, and modern UI. ⚠️Currently Working</p><div class="deploy-links"><a href="https://bakerywebsite12.netlify.app/" target="_blank" class="deploy-link">↗ Netlify</a></div></div>
       <div class="deploy-card"><span class="deploy-icon">👥</span><div class="deploy-name">Employee CRUD App</div><p class="deploy-desc">Full-stack Next.js + Django REST API app with JWT auth, role access, search &amp; pagination.</p><div class="deploy-links"><a href="https://crud-nextjs-rosy.vercel.app/" target="_blank" class="deploy-link">↗ App</a><a href="https://django-nextjs-backend-m93z.onrender.com/api/backend/" target="_blank" class="deploy-link">↗ API</a><a href="https://django-nextjs-backend-m93z.onrender.com" target="_blank" class="deploy-link">↗ Backend</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">🌦️</span><div class="deploy-name">Weather Forecast</div><p class="deploy-desc">Real-time weather data with modern glassmorphism UI and live API integration.</p><div class="deploy-links"><a href="https://whethar-application-production.up.railway.app" target="_blank" class="deploy-link">↗ Railway</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🌦️</span><div class="deploy-name">Weather Forecast</div><p class="deploy-desc">Real-time weather data with modern glassmorphism UI and live API integration.</p><div class="deploy-links"><a href="https://whether-application-ygep.onrender.com" target="_blank" class="deploy-link">↗ Render</a></div></div>
       <div class="deploy-card"><span class="deploy-icon">🔐</span><div class="deploy-name">CAPTCHA Auth System</div><p class="deploy-desc">Production-ready secure login with CAPTCHA verification and password validation.</p><div class="deploy-links"><a href="https://captcha-verification-r0v7.onrender.com" target="_blank" class="deploy-link">↗ Render</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">📝</span><div class="deploy-name">Quiz Application</div><p class="deploy-desc">25-question quiz app with HTML, CSS, Bootstrap, JavaScript, Django; light/dark themes, score & percentage display.</p><div class="deploy-links"><a href="https://quiz-application-wckb.onrender.com/" target="_blank" class="deploy-link">Render</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">🧮</span><div class="deploy-name">Smart Calculator</div><p class="deploy-desc">Full-featured calculator with Django backend logic and responsive interface.</p><div class="deploy-links"><a href="https://calculator-django-production.up.railway.app" target="_blank" class="deploy-link">↗ Railway</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">📝</span><div class="deploy-name">Quiz Application</div><p class="deploy-desc">25-question quiz app with HTML, CSS, Bootstrap, JavaScript, Django; light/dark themes, score & percentage display.</p><div class="deploy-links"><a href="https://quiz-application-wckb.onrender.com/" target="_blank" class="deploy-link">↗ Render</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🧮</span><div class="deploy-name">Smart Calculator</div><p class="deploy-desc">Full-featured calculator with Django backend logic and responsive interface.</p><div class="deploy-links"><a href="https://calculator-django-w42b.onrender.com" target="_blank" class="deploy-link">↗ Render</a></div></div>
       <div class="deploy-card" style="background: rgba(56,189,248,0.02); border-top: 1px solid rgba(56,189,248,0.08);"><span class="deploy-icon">📊</span><div class="deploy-name">More Coming Soon</div><p class="deploy-desc">Actively building more projects. E-Commerce platform deployment in progress.</p><div class="deploy-links"><a href="https://github.com/Venkatesh-Developer-py" target="_blank" class="deploy-link">↗ GitHub</a></div></div>
     </div>
   </section>
@@ -858,14 +858,14 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* ── SCROLL PROGRESS ── */
+  
   const navProgress = document.getElementById('navProgress');
   window.addEventListener('scroll', () => {
     const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
     navProgress.style.width = pct + '%';
   }, { passive: true });
 
-  /* ── SCROLL REVEAL ── */
+  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -875,7 +875,7 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  /* ── CUSTOM CURSOR ── */
+  
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -898,7 +898,7 @@
     el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
   });
 
-  /* ── TYPING EFFECT ── */
+  
   const phrases = ['Django & Python', 'React.js', 'REST APIs', 'MySQL & SQLite', 'Full Stack'];
   let pi = 0, ci = 0, deleting = false;
   const typedEl = document.getElementById('typedText');
@@ -918,7 +918,7 @@
   }
   setTimeout(typeLoop, 1200);
 
-  /* ── COUNTER ANIMATION ── */
+ 
   const counters = document.querySelectorAll('[data-count]');
   const floatCounters = document.querySelectorAll('[data-val]');
 
@@ -948,7 +948,7 @@
   }, { threshold: 0.3 });
   document.querySelector('.hero-card') && cardObserver.observe(document.querySelector('.hero-card'));
 
-  /* ── ORB PARALLAX ── */
+  
   document.addEventListener('mousemove', e => {
     const xPct = (e.clientX / window.innerWidth - 0.5) * 20;
     const yPct = (e.clientY / window.innerHeight - 0.5) * 20;
