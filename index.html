@@ -4,7 +4,19 @@
   <meta charset="UTF-8" />
   <title>M. Thiru Venkatesh | Python Full Stack Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of M. Thiru Venkatesh - Python Full Stack Developer with Django, React, and MySQL experience." />
+  <meta name="description" content="Portfolio of M. Thiru Venkatesh - Python Full Stack Developer Intern building web applications with Django, React, REST APIs and MySQL. Client projects, live deployments and skills." />
+  <meta name="author" content="M. Thiru Venkatesh" />
+  <meta name="theme-color" content="#060910" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="M. Thiru Venkatesh | Python Full Stack Developer" />
+  <meta property="og:description" content="Python Full Stack Developer Intern — Django, React, REST APIs, MySQL. Client projects and live deployments." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="M. Thiru Venkatesh | Python Full Stack Developer" />
+  <meta name="twitter:description" content="Python Full Stack Developer Intern — Django, React, REST APIs, MySQL." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060910'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3EMT%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"M. Thiru Venkatesh","jobTitle":"Python Full Stack Developer Intern","worksFor":{"@type":"Organization","name":"Profenaa Infotech"},"address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/thiruvenkatesh/","https://github.com/Venkatesh-Developer-py"]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -164,7 +176,7 @@
 
     /* ── LAYOUT ── */
     main { max-width: 1200px; margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
-    section { padding: 5rem 0 3rem; }
+    section { padding: 5rem 0 3rem; scroll-margin-top: 70px; }
 
     .label {
       font-family: 'DM Mono', monospace; font-size: 0.7rem;
@@ -199,6 +211,7 @@
     .hero-eyebrow:nth-child(1) { animation-delay: 0.1s; }
     .hero-eyebrow:nth-child(2) { animation-delay: 0.25s; }
     .hero-eyebrow:nth-child(3) { animation-delay: 0.4s; }
+    .hero-eyebrow:nth-child(4) { animation-delay: 0.55s; }
     @keyframes slideIn {
       from { opacity: 0; transform: translateX(-20px); }
       to { opacity: 1; transform: translateX(0); }
@@ -333,6 +346,7 @@
       background: var(--bg2); padding: 2rem; transition: background 0.35s;
       position: relative;
     }
+    .skill-cell.wide { grid-column: span 2; }
     .skill-cell::after {
       content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
       background: linear-gradient(90deg, transparent, rgba(56,189,248,0.15), transparent);
@@ -353,6 +367,23 @@
       transition: all 0.25s; cursor: default;
     }
     .chip:hover { border-color: var(--accent); color: var(--accent); background: var(--glow); transform: translateY(-1px); }
+
+    /* ── EXPERIENCE ── */
+    .exp-wrap { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border); border-radius: 18px; overflow: hidden; }
+    .exp-card {
+      background: var(--bg2); padding: 2.5rem; position: relative; transition: background 0.35s;
+      display: grid; grid-template-columns: 220px 1fr; gap: 2.5rem; align-items: start;
+    }
+    .exp-card:hover { background: var(--bg3); }
+    .exp-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), transparent);
+    }
+    .exp-period { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 0.7rem; }
+    .exp-place { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); margin-bottom: 1rem; }
+    .exp-role { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--text); margin-bottom: 0.4rem; font-weight: 400; }
+    .exp-company { font-size: 0.86rem; color: var(--muted2); margin-bottom: 1.2rem; }
+    .exp-card .project-stack { margin-top: 1.2rem; margin-bottom: 0; }
 
     /* ── PROJECTS ── */
     .projects-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 18px; overflow: hidden; }
@@ -404,6 +435,10 @@
       padding: 0.25rem 0.6rem; border-radius: 3px;
       background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.18);
       color: var(--accent3); margin-top: 0.25rem; text-align: center;
+    }
+    .project-badge.internal {
+      background: rgba(129,140,248,0.08); border-color: rgba(129,140,248,0.25);
+      color: var(--accent2);
     }
 
     /* ── LIVE DEPLOYMENTS ── */
@@ -514,14 +549,57 @@
     .typed-text { color: var(--accent2); }
     .type-cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent); margin-left: 2px; animation: blink 1s step-end infinite; vertical-align: text-bottom; }
 
+    /* ── NAV: active link, mobile toggle ── */
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after { width: 60%; }
+    .nav-toggle {
+      display: none; flex-direction: column; justify-content: center; gap: 5px;
+      width: 40px; height: 40px; padding: 0 9px; background: transparent;
+      border: 1px solid var(--border); border-radius: 8px; cursor: pointer;
+    }
+    .nav-toggle span { display: block; height: 1.5px; background: var(--accent); border-radius: 2px; }
+    .nav-toggle:hover { border-color: var(--accent); background: var(--glow); }
+
+    /* ── ACCESSIBILITY ── */
+    .skip-link {
+      position: fixed; left: 1rem; top: -4rem; z-index: 100000;
+      background: var(--accent); color: #060910; padding: 0.6rem 1rem;
+      border-radius: 6px; font-weight: 600; font-size: 0.85rem; transition: top 0.2s;
+    }
+    .skip-link:focus { top: 1rem; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-card { max-width: 440px; }
       .skills-grid, .deploy-grid, .contact-wrap, .edu-grid { grid-template-columns: 1fr; }
+      .skill-cell.wide { grid-column: auto; }
       .project-row { grid-template-columns: 1fr; }
       .project-links-col { flex-direction: row; flex-wrap: wrap; }
+      .exp-card { grid-template-columns: 1fr; gap: 1.25rem; padding: 2rem 1.5rem; }
       .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; gap: 0.25rem;
+        position: absolute; top: 100%; left: 0; right: 0;
+        padding: 0.75rem 1rem 1rem; background: rgba(6,9,16,0.97);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open a { padding: 0.7rem 0.9rem; }
+      .btn-primary, .btn-ghost, .contact-item { cursor: pointer; }
       nav { padding: 0 1rem; }
       main { padding: 0 1rem 4rem; }
       body { cursor: auto; }
@@ -534,6 +612,8 @@
   </style>
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- Custom Cursor -->
 <div class="cursor-dot" id="cursorDot"></div>
@@ -550,40 +630,43 @@
     <span>Open to Work — Python Full Stack Developer</span>
     <span>Immediate Availability — Coimbatore, India</span>
     <span>Django · React · REST APIs · MySQL</span>
-    <span>Fresher — B.E. Computer Science 2025</span>
+    <span>Python Full Stack Developer Intern — B.E. Computer Science 2025</span>
     <span>Open to Work — Python Full Stack Developer</span>
     <span>Immediate Availability — Coimbatore, India</span>
     <span>Django · React · REST APIs · MySQL</span>
-    <span>Fresher — B.E. Computer Science 2025</span>
+    <span>Python Full Stack Developer Intern — B.E. Computer Science 2025</span>
   </div>
 </div>
 
 <!-- Header -->
 <header>
   <div class="nav-progress" id="navProgress"></div>
-  <nav>
+  <nav aria-label="Primary">
     <div class="nav-brand">M. Thiruvenkatesh</div>
-    <div class="nav-links">
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
+      <a href="#live">Live</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#live">Live</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
   <!-- HERO -->
   <section id="about" class="hero">
     <div class="hero-inner">
       <div>
         <div class="hero-eyebrow-wrap">
-          <div class="hero-eyebrow">Python Full Stack Web Developer Fresher</div>
-          <div class="hero-eyebrow">Frontend Web Developer Fresher</div>
-          <div class="hero-eyebrow">Backend Developer Fresher</div>
+          <div class="hero-eyebrow">Python Full Stack Developer Intern</div>
+          <div class="hero-eyebrow">React.js / Frontend Developer</div>
+          <div class="hero-eyebrow">Django Backend &amp; REST API Developer</div>
+          <div class="hero-eyebrow">AI-Assisted Development &amp; Prompt Engineering</div>
         </div>
         <h1 class="hero-name">
           M. Thiru<span class="highlight">&nbsp;Venkatesh</span>
@@ -593,7 +676,7 @@
           <span class="typing-wrap"><span class="typed-text" id="typedText"></span><span class="type-cursor"></span></span>
         </p>
         <p class="hero-bio">
-          Computer Science graduate with hands-on experience designing and developing full stack web applications. I craft responsive frontends with React.js and robust Django backends with REST APIs, MySQL, and secure authentication flows.
+          Computer Science graduate with hands-on experience designing and developing full stack web applications. I craft responsive frontends with React.js and robust Django backends with REST APIs, MySQL, and secure authentication flows. Currently working as a Python Full Stack Developer Intern at Profenaa Infotech, building and deploying client applications.
         </p>
         <div class="hero-tags">
           <span class="tag">Python</span><span class="tag">Django</span>
@@ -602,25 +685,30 @@
           <span class="tag">HTML5</span><span class="tag">CSS3</span>
           <span class="tag">Bootstrap</span><span class="tag">REST API</span>
           <span class="tag">Session Auth</span><span class="tag">Basic Next.js</span>
+          <span class="tag">Vite</span><span class="tag">React Router</span>
+          <span class="tag">Django REST Framework</span><span class="tag">PostgreSQL</span>
+          <span class="tag">Postman</span><span class="tag">Prompt Engineering</span>
+          <span class="tag">SEO &amp; GEO</span>
         </div>
         <div class="hero-actions">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=santhiyavenki0@gmail.com&body=Hi%20Venkatesh," target="_blank" class="btn-primary">✉ Send Email</a>
-          <a href="M._Thiru_Venkatesh_Python-Full-Stack-Developer.pdf" target="_blank" class="btn-ghost">👁 View Resume</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=santhiyavenki0@gmail.com&amp;body=Hi%20Venkatesh," target="_blank" rel="noopener noreferrer" class="btn-primary">✉ Send Email</a>
+          <a href="M._Thiru_Venkatesh_Python-Full-Stack-Developer.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">👁 View Resume</a>
+          <a href="#live" class="btn-ghost">🚀 Live Projects</a>
           <a href="#contact" class="btn-ghost">View Contact</a>
         </div>
       </div>
 
       <aside class="hero-card">
         <div class="avatar-wrap">
-          <img src="Image.png" alt="M. Thiru Venkatesh" class="avatar">
+          <img src="Image.png" alt="M. Thiru Venkatesh" class="avatar" width="130" height="130">
         </div>
         <div class="stat-grid">
           <div class="stat">
-            <span class="stat-num" data-count="8">0</span>
+            <span class="stat-num" data-count="18">0</span>
             <span class="stat-label">Projects</span>
           </div>
           <div class="stat">
-            <span class="stat-num" data-count="5">0</span>
+            <span class="stat-num" data-count="10">0</span>
             <span class="stat-label">Live Apps</span>
           </div>
           <div class="stat">
@@ -643,17 +731,50 @@
     </div>
   </section>
 
+
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section id="experience" class="fade-up">
+    <div class="label">Professional Experience</div>
+    <h2 class="section-title">Where I'm Working</h2>
+    <div class="exp-wrap">
+      <div class="exp-card">
+        <div>
+          <div class="exp-period">APR 2026 — PRESENT</div>
+          <div class="exp-place">Coimbatore</div>
+          <span class="project-badge">Current Role</span>
+        </div>
+        <div>
+          <h3 class="exp-role">Python Full Stack Developer Intern</h3>
+          <div class="exp-company">Profenaa Infotech</div>
+          <ul class="project-highlights">
+            <li>Develop full-stack web applications using Python, Django, React/Vite, JavaScript and MySQL</li>
+            <li>Design and integrate REST APIs</li>
+            <li>Implement authentication, form validation, password hashing and database operations</li>
+            <li>Debug frontend, backend, API and production issues using browser developer tools and Postman</li>
+            <li>Deploy and maintain client applications on Hostinger VPS, including domain, web-server and SSL configuration</li>
+            <li>Optimize production websites for performance, accessibility, SEO and GEO</li>
+            <li>Use AI-assisted development and structured prompt engineering to analyze and troubleshoot implementation drafts</li>
+          </ul>
+          <div class="project-stack"><span class="stack-chip">Python</span><span class="stack-chip">Django</span><span class="stack-chip">React</span><span class="stack-chip">Vite</span><span class="stack-chip">JavaScript</span><span class="stack-chip">MySQL</span><span class="stack-chip">Postman</span><span class="stack-chip">Hostinger VPS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SKILLS -->
   <section id="skills" class="fade-up">
     <div class="label">Technical Stack</div>
     <h2 class="section-title">Skills &amp; Technologies</h2>
     <div class="skills-grid">
-      <div class="skill-cell"><h3>Frontend</h3><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span><span class="chip">React.js</span><span class="chip">Responsive Design</span><span class="chip">Form Validation</span></div></div>
-      <div class="skill-cell"><h3>Backend &amp; APIs</h3><div class="chips"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">Django ORM</span><span class="chip">REST Framework</span><span class="chip">Django Templates</span><span class="chip">Authentication</span><span class="chip">SMTP</span></div></div>
-      <div class="skill-cell"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">PostgreSQL</span><span class="chip">Django ORM Queries</span><span class="chip">MySQL Connector</span></div></div>
-      <div class="skill-cell"><h3>Tools &amp; Platforms</h3><div class="chips"><span class="chip">VS Code</span><span class="chip">PyCharm</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Netlify</span><span class="chip">Railway</span><span class="chip">Render</span><span class="chip">Vercel</span></div></div>
+      <div class="skill-cell"><h3>Frontend</h3><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span><span class="chip">React.js</span><span class="chip">Responsive Design</span><span class="chip">Form Validation</span><span class="chip">React Router</span><span class="chip">Vite</span></div></div>
+      <div class="skill-cell"><h3>Backend &amp; APIs</h3><div class="chips"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">Django ORM</span><span class="chip">REST Framework</span><span class="chip">Django Templates</span><span class="chip">Authentication</span><span class="chip">SMTP</span><span class="chip">REST API Development</span><span class="chip">Password Hashing</span></div></div>
+      <div class="skill-cell"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">PostgreSQL</span><span class="chip">Django ORM Queries</span><span class="chip">MySQL Connector</span><span class="chip">Supabase</span><span class="chip">Database Design</span></div></div>
+      <div class="skill-cell"><h3>Tools &amp; Platforms</h3><div class="chips"><span class="chip">VS Code</span><span class="chip">PyCharm</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Netlify</span><span class="chip">Railway</span><span class="chip">Render</span><span class="chip">Vercel</span><span class="chip">Postman</span><span class="chip">Google Cloud</span></div></div>
       <div class="skill-cell"><h3>Core Concepts</h3><div class="chips"><span class="chip">OOP</span><span class="chip">MVT Architecture</span><span class="chip">Session Management</span><span class="chip">CRUD Operations</span><span class="chip">JWT</span><span class="chip">API Integration</span></div></div>
       <div class="skill-cell"><h3>Soft Skills</h3><div class="chips"><span class="chip">Quick Learner</span><span class="chip">Problem Solving</span><span class="chip">Clean Code</span><span class="chip">Team Collaboration</span><span class="chip">Detail-Oriented</span></div></div>
+      <div class="skill-cell"><h3>Hosting, Deployment &amp; SEO</h3><div class="chips"><span class="chip">Hostinger VPS</span><span class="chip">Domain Management</span><span class="chip">SSL Configuration</span><span class="chip">Deployment</span><span class="chip">Google Search Console</span><span class="chip">SEO</span><span class="chip">GEO (Generative Engine Optimization)</span></div></div>
+      <div class="skill-cell wide"><h3>AI &amp; Prompt Engineering</h3><div class="chips"><span class="chip">Generative AI</span><span class="chip">Prompt Engineering</span><span class="chip">Structured Prompt Design</span><span class="chip">Prompt Iteration &amp; Refinement</span><span class="chip">AI-Assisted Development</span><span class="chip">AI-Assisted Debugging</span></div></div>
     </div>
   </section>
 
@@ -666,13 +787,70 @@
       <div class="project-row">
         <div>
           <div class="project-num">01</div>
-          <div class="project-name">E-Commerce Web Application</div>
+          <h3 class="project-name">Student &amp; Staff Management System — Internal Project</h3>
+          <p class="project-desc">Responsive student and admin dashboard interfaces integrated with backend REST API endpoints.</p>
+          <div class="project-stack"><span class="stack-chip">HTML5</span><span class="stack-chip">CSS3</span><span class="stack-chip">JavaScript</span><span class="stack-chip">Bootstrap</span><span class="stack-chip">REST APIs</span><span class="stack-chip">MySQL</span></div>
+          <ul class="project-highlights">
+            <li>Developed responsive student and admin dashboard interfaces</li>
+            <li>Worked on attendance, leave management, projects, certificates, performance, notifications, feedback, referrals and account management</li>
+            <li>Integrated frontend workflows with REST API endpoints provided by the backend team</li>
+            <li>Collaborated on API request/response structures, validation and integration workflows</li>
+            <li>Used AI-assisted development to analyze and troubleshoot implementation drafts</li>
+          </ul>
+        </div>
+        <div class="project-links-col"><span class="project-badge internal">Internal Project · No Public Link</span></div>
+      </div>
+
+      <div class="project-row">
+        <div>
+          <div class="project-num">02</div>
+          <h3 class="project-name">PyBot AI Solutions — Client Project</h3>
+          <p class="project-desc">Responsive client website with a React/Vite frontend integrated with a Django REST API backend.</p>
+          <div class="project-stack"><span class="stack-chip">React</span><span class="stack-chip">Vite</span><span class="stack-chip">Django</span><span class="stack-chip">MySQL</span><span class="stack-chip">Web3Forms</span><span class="stack-chip">Hostinger</span></div>
+          <ul class="project-highlights">
+            <li>Developed a responsive React/Vite frontend integrated with a Django REST API backend</li>
+            <li>Implemented customer registration and login with secure password hashing</li>
+            <li>Developed multi-step application forms and automated certificate downloads</li>
+            <li>Integrated MySQL and improved website metadata for SEO and GEO</li>
+          </ul>
+        </div>
+        <div class="project-links-col">
+          <a href="https://pybotaisolutions.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit the PyBot AI Solutions website (opens in a new tab)">↗ Live Site</a>
+          <span class="project-badge">Client Project</span>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div>
+          <div class="project-num">03</div>
+          <h3 class="project-name">Getzz Ready Kidzz School Website — Client Project</h3>
+          <p class="project-desc">Mobile-first, responsive school marketing website with admission inquiry forms.</p>
+          <div class="project-stack"><span class="stack-chip">HTML5</span><span class="stack-chip">CSS3</span><span class="stack-chip">JavaScript</span><span class="stack-chip">Web3Forms</span></div>
+          <ul class="project-highlights">
+            <li>Designed and deployed a mobile-first, responsive school marketing website</li>
+            <li>Integrated admission inquiry forms with automated email notifications using Web3Forms</li>
+            <li>Improved page structure, performance and search-engine visibility</li>
+          </ul>
+        </div>
+        <div class="project-links-col">
+          <a href="https://www.getzzreadykidzzschool.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit the Getzz Ready Kidzz School website (opens in a new tab)">↗ Live Site</a>
+          <span class="project-badge">Client Project</span>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div>
+          <div class="project-num">04</div>
+          <h3 class="project-name">E-Commerce Web Application</h3>
           <p class="project-desc">Full-stack e-commerce platform with authentication, product management, cart, checkout, and integrated Razorpay payment gateway.</p>
-          <div class="project-stack"><span class="stack-chip">Python</span><span class="stack-chip">Django</span><span class="stack-chip">MySQL</span><span class="stack-chip">Bootstrap</span><span class="stack-chip">JavaScript</span><span class="stack-chip">Razorpay API</span></div>
+          <div class="project-stack"><span class="stack-chip">Python</span><span class="stack-chip">Django</span><span class="stack-chip">MySQL</span><span class="stack-chip">Bootstrap</span><span class="stack-chip">JavaScript</span><span class="stack-chip">Razorpay API</span><span class="stack-chip">HTML5</span><span class="stack-chip">CSS3</span></div>
           <ul class="project-highlights">
             <li>Razorpay payment gateway for secure online transactions</li>
             <li>MySQL &amp; Admin panel to manage products, orders, and users</li>
             <li>Complete auth flow with session management</li>
+            <li>Authorization and customer account management, with product catalogs and product management</li>
+            <li>Cart, Buy Now, checkout and order-processing workflows, including order status and cancellation</li>
+            <li>Responsive customer and administrative interfaces</li>
           </ul>
         </div>
         <div class="project-links-col"><span class="project-badge">Nov – Dec 2025</span></div>
@@ -680,8 +858,8 @@
 
       <div class="project-row">
         <div>
-          <div class="project-num">02</div>
-          <div class="project-name">Employee CRUD App — Next.js + Django</div>
+          <div class="project-num">05</div>
+          <h3 class="project-name">Employee CRUD App — Next.js + Django</h3>
           <p class="project-desc">Full-stack employee management system with JWT auth, role-based access, real-time updates, search, filtering and pagination.</p>
           <div class="project-stack"><span class="stack-chip">Next.js 14</span><span class="stack-chip">TypeScript</span><span class="stack-chip">Django REST</span><span class="stack-chip">PostgreSQL</span><span class="stack-chip">JWT</span><span class="stack-chip">Tailwind CSS</span></div>
           <ul class="project-highlights">
@@ -691,16 +869,16 @@
           </ul>
         </div>
         <div class="project-links-col">
-          <a href="https://crud-nextjs-rosy.vercel.app/" target="_blank" class="project-link">↗ Frontend</a>
-          <a href="https://django-nextjs-backend-m93z.onrender.com/api/backend/" target="_blank" class="project-link">↗ API</a>
+          <a href="https://crud-nextjs-rosy.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">↗ Frontend</a>
+          <a href="https://django-nextjs-backend-m93z.onrender.com/api/backend/" target="_blank" rel="noopener noreferrer" class="project-link">↗ API</a>
           <span class="project-badge">Jan – Feb 2026</span>
         </div>
       </div>
 
       <div class="project-row">
         <div>
-          <div class="project-num">03</div>
-          <div class="project-name">Secure Login System with CAPTCHA</div>
+          <div class="project-num">06</div>
+          <h3 class="project-name">Secure Login System with CAPTCHA</h3>
           <p class="project-desc">Production-ready authentication system with CAPTCHA verification, password validation rules, and clean login/registration UI.</p>
           <div class="project-stack"><span class="stack-chip">Django</span><span class="stack-chip">Python</span><span class="stack-chip">CAPTCHA</span><span class="stack-chip">HTML</span><span class="stack-chip">CSS</span><span class="stack-chip">JavaScript</span></div>
           <ul class="project-highlights">
@@ -709,15 +887,15 @@
           </ul>
         </div>
         <div class="project-links-col">
-          <a href="https://captcha-verification-r0v7.onrender.com" target="_blank" class="project-link">↗ Live App</a>
+          <a href="https://captcha-verification-r0v7.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">↗ Live App</a>
           <span class="project-badge">Jul 2025</span>
         </div>
       </div>
 
       <div class="project-row">
         <div>
-          <div class="project-num">04</div>
-          <div class="project-name">Email Verification System with OTP</div>
+          <div class="project-num">07</div>
+          <h3 class="project-name">Email Verification System with OTP</h3>
           <p class="project-desc">Secure registration system using OTP over SMTP. Validates identity before granting access, with error handling for wrong OTP entries.</p>
           <div class="project-stack"><span class="stack-chip">Django</span><span class="stack-chip">SMTP</span><span class="stack-chip">SQLite</span><span class="stack-chip">JavaScript</span><span class="stack-chip">Responsive Email</span></div>
           <ul class="project-highlights">
@@ -730,8 +908,8 @@
 
       <div class="project-row">
         <div>
-          <div class="project-num">05</div>
-          <div class="project-name">Admin Dashboard — Product &amp; Order Control</div>
+          <div class="project-num">08</div>
+          <h3 class="project-name">Admin Dashboard — Product &amp; Order Control</h3>
           <p class="project-desc">Custom admin dashboard with full CRUD operations for managing products, users, and orders with real-time status display.</p>
           <div class="project-stack"><span class="stack-chip">Django</span><span class="stack-chip">Python</span><span class="stack-chip">MySQL</span><span class="stack-chip">Bootstrap</span><span class="stack-chip">JavaScript</span></div>
         </div>
@@ -740,35 +918,35 @@
 
       <div class="project-row">
         <div>
-          <div class="project-num">06</div>
-          <div class="project-name">Weather Forecast Application</div>
+          <div class="project-num">09</div>
+          <h3 class="project-name">Weather Forecast Application</h3>
           <p class="project-desc">Real-time weather app using external API integration with glassmorphism UI, displaying temperature, humidity, and conditions.</p>
           <div class="project-stack"><span class="stack-chip">Django</span><span class="stack-chip">Python</span><span class="stack-chip">Weather API</span><span class="stack-chip">JavaScript</span><span class="stack-chip">CSS</span></div>
         </div>
         <div class="project-links-col">
-          <a href="https://whether-application-ygep.onrender.com" target="_blank" class="project-link">↗ Live App</a>
+          <a href="https://whether-application-ygep.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">↗ Live App</a>
           <span class="project-badge">Sep – Oct 2025</span>
         </div>
       </div>
 
     </div>
   </section>
-
   <!-- LIVE DEPLOYMENTS -->
   <section id="live" class="fade-up">
     <div class="label">Production</div>
     <h2 class="section-title">Live Deployments</h2>
     <div class="deploy-grid">
-      <div class="deploy-card"><span class="deploy-icon">🌐</span><div class="deploy-name">Bakery Website</div><p class="deploy-desc">React SPA with component-based architecture, responsive layout, and modern UI. ⚠️Currently Working</p><div class="deploy-links"><a href="https://bakerywebsite12.netlify.app/" target="_blank" class="deploy-link">↗ Netlify</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">👥</span><div class="deploy-name">Employee CRUD App</div><p class="deploy-desc">Full-stack Next.js + Django REST API app with JWT auth, role access, search &amp; pagination.</p><div class="deploy-links"><a href="https://crud-nextjs-rosy.vercel.app/" target="_blank" class="deploy-link">↗ App</a><a href="https://django-nextjs-backend-m93z.onrender.com/api/backend/" target="_blank" class="deploy-link">↗ API</a><a href="https://django-nextjs-backend-m93z.onrender.com" target="_blank" class="deploy-link">↗ Backend</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">🌦️</span><div class="deploy-name">Weather Forecast</div><p class="deploy-desc">Real-time weather data with modern glassmorphism UI and live API integration.</p><div class="deploy-links"><a href="https://whether-application-ygep.onrender.com" target="_blank" class="deploy-link">↗ Render</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">🔐</span><div class="deploy-name">CAPTCHA Auth System</div><p class="deploy-desc">Production-ready secure login with CAPTCHA verification and password validation.</p><div class="deploy-links"><a href="https://captcha-verification-r0v7.onrender.com" target="_blank" class="deploy-link">↗ Render</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">📝</span><div class="deploy-name">Quiz Application</div><p class="deploy-desc">25-question quiz app with HTML, CSS, Bootstrap, JavaScript, Django; light/dark themes, score & percentage display.</p><div class="deploy-links"><a href="https://quiz-application-wckb.onrender.com/" target="_blank" class="deploy-link">↗ Render</a></div></div>
-      <div class="deploy-card"><span class="deploy-icon">🧮</span><div class="deploy-name">Smart Calculator</div><p class="deploy-desc">Full-featured calculator with Django backend logic and responsive interface.</p><div class="deploy-links"><a href="https://calculator-django-w42b.onrender.com" target="_blank" class="deploy-link">↗ Render</a></div></div>
-      <div class="deploy-card" style="background: rgba(56,189,248,0.02); border-top: 1px solid rgba(56,189,248,0.08);"><span class="deploy-icon">📊</span><div class="deploy-name">More Coming Soon</div><p class="deploy-desc">Actively building more projects. E-Commerce platform deployment in progress.</p><div class="deploy-links"><a href="https://github.com/Venkatesh-Developer-py" target="_blank" class="deploy-link">↗ GitHub</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🤖</span><h3 class="deploy-name">PyBot AI Solutions</h3><p class="deploy-desc">Client website built with React, Vite and a Django REST API backend, hosted on Hostinger.</p><div class="deploy-links"><a href="https://pybotaisolutions.com/" target="_blank" rel="noopener noreferrer" class="deploy-link" aria-label="Visit pybotaisolutions.com (opens in a new tab)">↗ Website</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🏫</span><h3 class="deploy-name">Getzz Ready Kidzz School</h3><p class="deploy-desc">Mobile-first school marketing website with admission inquiry forms and email notifications.</p><div class="deploy-links"><a href="https://www.getzzreadykidzzschool.com/" target="_blank" rel="noopener noreferrer" class="deploy-link" aria-label="Visit getzzreadykidzzschool.com (opens in a new tab)">↗ Website</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🌐</span><h3 class="deploy-name">Bakery Website</h3><p class="deploy-desc">React SPA with component-based architecture, responsive layout, and modern UI. ⚠️Currently Working</p><div class="deploy-links"><a href="https://bakerywebsite12.netlify.app/" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ Netlify</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">👥</span><h3 class="deploy-name">Employee CRUD App</h3><p class="deploy-desc">Full-stack Next.js + Django REST API app with JWT auth, role access, search &amp; pagination.</p><div class="deploy-links"><a href="https://crud-nextjs-rosy.vercel.app/" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ App</a><a href="https://django-nextjs-backend-m93z.onrender.com/api/backend/" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ API</a><a href="https://django-nextjs-backend-m93z.onrender.com" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ Backend</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🌦️</span><h3 class="deploy-name">Weather Forecast</h3><p class="deploy-desc">Real-time weather data with modern glassmorphism UI and live API integration.</p><div class="deploy-links"><a href="https://whether-application-ygep.onrender.com" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ Render</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🔐</span><h3 class="deploy-name">CAPTCHA Auth System</h3><p class="deploy-desc">Production-ready secure login with CAPTCHA verification and password validation.</p><div class="deploy-links"><a href="https://captcha-verification-r0v7.onrender.com" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ Render</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">📝</span><h3 class="deploy-name">Quiz Application</h3><p class="deploy-desc">25-question quiz app with HTML, CSS, Bootstrap, JavaScript, Django; light/dark themes, score &amp; percentage display.</p><div class="deploy-links"><a href="https://quiz-application-wckb.onrender.com/" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ Render</a></div></div>
+      <div class="deploy-card"><span class="deploy-icon">🧮</span><h3 class="deploy-name">Smart Calculator</h3><p class="deploy-desc">Full-featured calculator with Django backend logic and responsive interface.</p><div class="deploy-links"><a href="https://calculator-django-w42b.onrender.com" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ Render</a></div></div>
+      <div class="deploy-card" style="background: rgba(56,189,248,0.02); border-top: 1px solid rgba(56,189,248,0.08);"><span class="deploy-icon">📊</span><h3 class="deploy-name">More Coming Soon</h3><p class="deploy-desc">Actively building more projects. E-Commerce platform deployment in progress.</p><div class="deploy-links"><a href="https://github.com/Venkatesh-Developer-py" target="_blank" rel="noopener noreferrer" class="deploy-link">↗ GitHub</a></div></div>
     </div>
   </section>
-
   <!-- EDUCATION -->
   <section id="education" class="fade-up">
     <div class="label">Background</div>
@@ -776,14 +954,14 @@
     <div class="edu-grid">
       <div class="edu-card">
         <div class="edu-period">2021 — 2025</div>
-        <div class="edu-degree">B.E. Computer Science &amp; Engineering</div>
+        <h3 class="edu-degree">B.E. Computer Science &amp; Engineering</h3>
         <div class="edu-inst">KIT &amp; KIM Technical Campus, Anna University · Karaikudi</div>
         <div class="edu-cgpa">⭐ CGPA: 8.5 / 10</div>
         <div class="chips"><span class="chip">Data Structures</span><span class="chip">Algorithms</span><span class="chip">DBMS</span><span class="chip">Operating Systems</span><span class="chip">Networking</span></div>
       </div>
       <div class="edu-card">
         <div class="edu-period">Aug 2025 — Feb 2026</div>
-        <div class="edu-degree">Python Full Stack Web Development</div>
+        <h3 class="edu-degree">Python Full Stack Web Development</h3>
         <div class="edu-inst">IDM TechPark · Coimbatore</div>
         <div style="margin-bottom: 1.2rem;"></div>
         <div class="chips"><span class="chip">HTML5 · CSS3</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span><span class="chip">React.js</span><span class="chip">Python</span><span class="chip">Django</span><span class="chip">MySQL · SQLite</span><span class="chip">REST APIs</span></div>
@@ -815,14 +993,14 @@
       </div>
       <div class="contact-card">
         <div class="contact-card-title">Online Presence</div>
-        <a href="https://www.linkedin.com/in/thiruvenkatesh/" target="_blank" class="contact-item" style="text-decoration:none; display:flex;">
+        <a href="https://www.linkedin.com/in/thiruvenkatesh/" target="_blank" rel="noopener noreferrer" class="contact-item" style="text-decoration:none; display:flex;">
           <div class="contact-item-icon">💼</div>
           <div class="contact-item-content">
             <div class="contact-item-label">LinkedIn</div>
             <div class="contact-item-value">thiruvenkatesh</div>
           </div>
         </a>
-        <a href="https://github.com/Venkatesh-Developer-py" target="_blank" class="contact-item" style="text-decoration:none; display:flex;">
+        <a href="https://github.com/Venkatesh-Developer-py" target="_blank" rel="noopener noreferrer" class="contact-item" style="text-decoration:none; display:flex;">
           <div class="contact-item-icon">📂</div>
           <div class="contact-item-content">
             <div class="contact-item-label">GitHub</div>
@@ -857,6 +1035,29 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile menu + active-link highlighting
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navLinks');
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  function closeMenu() { navMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); }
+  navToggle.addEventListener('click', () => {
+    const open = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+  navAnchors.forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      navAnchors.forEach(a => {
+        const on = a.getAttribute('href') === '#' + e.target.id;
+        a.classList.toggle('active', on);
+        if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('main section[id]').forEach(sec => spy.observe(sec));
 
   
   const navProgress = document.getElementById('navProgress');
@@ -893,13 +1094,13 @@
   }
   lerpCursor();
 
-  document.querySelectorAll('a, button, .chip, .tag, .stat, .contact-item, .project-row, .deploy-card, .skill-cell').forEach(el => {
+  document.querySelectorAll('a, button, .chip, .tag, .stat, .contact-item, .project-row, .deploy-card, .skill-cell, .exp-card').forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
   });
 
   
-  const phrases = ['Django & Python', 'React.js', 'REST APIs', 'MySQL & SQLite', 'Full Stack'];
+  const phrases = ['Django & Python', 'React.js', 'REST APIs', 'MySQL & SQLite', 'Full Stack', 'React + Vite', 'Prompt Engineering', 'SEO & GEO'];
   let pi = 0, ci = 0, deleting = false;
   const typedEl = document.getElementById('typedText');
 
